@@ -8,270 +8,279 @@ public class CurrencyConverter
         double amount;
         double dollar, euro, pound, canadianDollar, swissFranc, jordanianDinar, omaniRial, kuwaitiDinar, nepaliRupee;
         int choice;
+        int answer;
 
         DecimalFormat f = new DecimalFormat("##.##");
         Scanner sc = new Scanner(System.in);
 
         System.out.println(". . . . . . . . . . . .Commission Free Money Exchange . . . . . . . . . . ");
         System.out.println(". . . . . . . . . . . . .Welcome to money Exchange . . . . . . . . . . ");
-        System.out.println("Following are the Choices:");
-        System.out.println("Please Enter 1: Dollar");
-        System.out.println("Please Enter 2: Euro");
-        System.out.println("Please Enter 3: Pound");
-        System.out.println("Please Enter 4: CanadianDollar");
-        System.out.println("Please Enter 5: SwissFranc");
-        System.out.println("Please Enter 6: JordanianDinar");
-        System.out.println("Please Enter 7: OmaniRial");
-        System.out.println("Please Enter 8: KuwaitiDinar");
-        System.out.println("Please Enter 9: NepaliRupee");
 
-        System.out.println("\n Please choose from above given options: ");
-        choice = sc.nextInt();
+        do{
+            System.out.println("Following are the Choices:");
+            System.out.println("Please Enter 1: Dollar");
+            System.out.println("Please Enter 2: Euro");
+            System.out.println("Please Enter 3: Pound");
+            System.out.println("Please Enter 4: CanadianDollar");
+            System.out.println("Please Enter 5: SwissFranc");
+            System.out.println("Please Enter 6: JordanianDinar");
+            System.out.println("Please Enter 7: OmaniRial");
+            System.out.println("Please Enter 8: KuwaitiDinar");
+            System.out.println("Please Enter 9: NepaliRupee");
 
-        System.out.println("Enter the amount you want to convert?");
-        amount = sc.nextFloat();
+            System.out.println("\n Please choose from above given options: ");
+            choice = sc.nextInt();
 
-        switch (choice)
-        {
-            case 1: // dollar conversion
-                euro = amount * 0.93;
-                System.out.println(amount + "Dollar = " + f.format(euro) + " Euro");
+            System.out.println("Enter the amount you want to convert?");
+            amount = sc.nextFloat();
 
-                pound = amount * 0.79;
-                System.out.println(amount + "Dollar = " + f.format(pound) + " Pound");
 
-                canadianDollar = amount * 1.27;
-                System.out.println(amount + "Dollar = " + f.format(canadianDollar) + " CanadianDollar");
+            switch (choice)
+            {
+                case 1: // dollar conversion
+                    euro = amount * 0.93;
+                    System.out.println(amount + "Dollar = " + f.format(euro) + " Euro");
 
-                swissFranc = amount * 0.96;
-                System.out.println(amount + "Dollar = " + f.format(swissFranc) + " SwissFranc");
+                    pound = amount * 0.79;
+                    System.out.println(amount + "Dollar = " + f.format(pound) + " Pound");
 
-                jordanianDinar = amount * 0.71;
-                System.out.println(amount + "Dollar = " + f.format(jordanianDinar) + " JordanianDinar");
+                    canadianDollar = amount * 1.27;
+                    System.out.println(amount + "Dollar = " + f.format(canadianDollar) + " CanadianDollar");
 
-                omaniRial = amount * 0.38;
-                System.out.println(amount + "Dollar = " + f.format(omaniRial) + " OmaniRial");
+                    swissFranc = amount * 0.96;
+                    System.out.println(amount + "Dollar = " + f.format(swissFranc) + " SwissFranc");
 
-                kuwaitiDinar = amount * 0.31;
-                System.out.println(amount + "Dollar = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    jordanianDinar = amount * 0.71;
+                    System.out.println(amount + "Dollar = " + f.format(jordanianDinar) + " JordanianDinar");
 
-                nepaliRupee = amount * 123.81;
-                System.out.println(amount + "Dollar = " + f.format(nepaliRupee) + " NepaliRupee");
-                break;
+                    omaniRial = amount * 0.38;
+                    System.out.println(amount + "Dollar = " + f.format(omaniRial) + " OmaniRial");
 
+                    kuwaitiDinar = amount * 0.31;
+                    System.out.println(amount + "Dollar = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
 
-            case 2: // Euro conversion
-                dollar = amount * 1.07;
-                System.out.println(amount + "euro = " + f.format(dollar) + " Dollar");
+                    nepaliRupee = amount * 123.81;
+                    System.out.println(amount + "Dollar = " + f.format(nepaliRupee) + " NepaliRupee");
+                    break;
 
-                pound = amount * 0.85;
-                System.out.println(amount + "euro = " + f.format(pound) + " Pound");
 
-                canadianDollar = amount * 1.37;
-                System.out.println(amount + "euro = " + f.format(canadianDollar) + " CanadianDollar");
+                case 2: // Euro conversion
+                    dollar = amount * 1.07;
+                    System.out.println(amount + "euro = " + f.format(dollar) + " Dollar");
 
-                swissFranc = amount * 1.03;
-                System.out.println(amount + "euro = " + f.format(swissFranc) + " SwissFranc");
+                    pound = amount * 0.85;
+                    System.out.println(amount + "euro = " + f.format(pound) + " Pound");
 
-                jordanianDinar = amount * 0.76;
-                System.out.println(amount + "euro = " + f.format(jordanianDinar) + " JordanianDinar");
+                    canadianDollar = amount * 1.37;
+                    System.out.println(amount + "euro = " + f.format(canadianDollar) + " CanadianDollar");
 
-                omaniRial = amount * 0.41;
-                System.out.println(amount + "euro = " + f.format(omaniRial) + " OmaniRial");
+                    swissFranc = amount * 1.03;
+                    System.out.println(amount + "euro = " + f.format(swissFranc) + " SwissFranc");
 
-                kuwaitiDinar = amount * 0.33;
-                System.out.println(amount + "euro = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    jordanianDinar = amount * 0.76;
+                    System.out.println(amount + "euro = " + f.format(jordanianDinar) + " JordanianDinar");
 
-                nepaliRupee = amount * 133.12;
-                System.out.println(amount + "euro = " + f.format(nepaliRupee) + " NepaliRupee");
-                break;
+                    omaniRial = amount * 0.41;
+                    System.out.println(amount + "euro = " + f.format(omaniRial) + " OmaniRial");
 
-            case 3: //pound conversion
-                dollar = amount * 1.27;
-                System.out.println(amount + "pound = " + f.format(dollar) + " Dollar");
+                    kuwaitiDinar = amount * 0.33;
+                    System.out.println(amount + "euro = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
 
-                euro = amount * 1.18;
-                System.out.println(amount + "pound = " + f.format(euro) + " Euro");
+                    nepaliRupee = amount * 133.12;
+                    System.out.println(amount + "euro = " + f.format(nepaliRupee) + " NepaliRupee");
+                    break;
 
-                canadianDollar = amount * 1.61;
-                System.out.println(amount + "pound = " + f.format(canadianDollar) + " CanadianDollar");
+                case 3: //pound conversion
+                    dollar = amount * 1.27;
+                    System.out.println(amount + "pound = " + f.format(dollar) + " Dollar");
 
-                swissFranc = amount * 1.21;
-                System.out.println(amount + "pound = " + f.format(swissFranc) + " SwissFranc");
+                    euro = amount * 1.18;
+                    System.out.println(amount + "pound = " + f.format(euro) + " Euro");
 
-                jordanianDinar = amount * 0.90;
-                System.out.println(amount + "pound = " + f.format(jordanianDinar) + " JordanianDinar");
+                    canadianDollar = amount * 1.61;
+                    System.out.println(amount + "pound = " + f.format(canadianDollar) + " CanadianDollar");
 
-                omaniRial = amount * 0.49;
-                System.out.println(amount + "pound = " + f.format(omaniRial) + " OmaniRial");
+                    swissFranc = amount * 1.21;
+                    System.out.println(amount + "pound = " + f.format(swissFranc) + " SwissFranc");
 
-                kuwaitiDinar = amount * 0.39;
-                System.out.println(amount + "pound = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    jordanianDinar = amount * 0.90;
+                    System.out.println(amount + "pound = " + f.format(jordanianDinar) + " JordanianDinar");
 
-                nepaliRupee = amount * 156.59;
-                System.out.println(amount + "pound = " + f.format(nepaliRupee) + " NepaliRupee");
-                break;
+                    omaniRial = amount * 0.49;
+                    System.out.println(amount + "pound = " + f.format(omaniRial) + " OmaniRial");
 
-            case 4: // candianDollar
-                dollar = amount * 0.79;
-                System.out.println(amount + "candianDollar = " + f.format(dollar) + " Dollar");
+                    kuwaitiDinar = amount * 0.39;
+                    System.out.println(amount + "pound = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
 
-                euro = amount * 0.73;
-                System.out.println(amount + "candianDollar = " + f.format(euro) + " Euro");
+                    nepaliRupee = amount * 156.59;
+                    System.out.println(amount + "pound = " + f.format(nepaliRupee) + " NepaliRupee");
+                    break;
 
-                pound = amount * 0.62;
-                System.out.println(amount + "candianDollar = " + f.format(pound) + " Pound");
+                case 4: // candianDollar
+                    dollar = amount * 0.79;
+                    System.out.println(amount + "candianDollar = " + f.format(dollar) + " Dollar");
 
-                swissFranc = amount * 0.75;
-                System.out.println(amount + "candianDollar = " + f.format(swissFranc) + " SwissFranc");
+                    euro = amount * 0.73;
+                    System.out.println(amount + "candianDollar = " + f.format(euro) + " Euro");
 
-                jordanianDinar = amount * 0.56;
-                System.out.println(amount + "candianDollar = " + f.format(jordanianDinar) + " JordanianDinar");
+                    pound = amount * 0.62;
+                    System.out.println(amount + "candianDollar = " + f.format(pound) + " Pound");
 
-                omaniRial = amount * 0.30;
-                System.out.println(amount + "candianDollar = " + f.format(omaniRial) + " OmaniRial");
+                    swissFranc = amount * 0.75;
+                    System.out.println(amount + "candianDollar = " + f.format(swissFranc) + " SwissFranc");
 
-                kuwaitiDinar = amount * 0.24;
-                System.out.println(amount + "candianDollar = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    jordanianDinar = amount * 0.56;
+                    System.out.println(amount + "candianDollar = " + f.format(jordanianDinar) + " JordanianDinar");
 
-                nepaliRupee = amount * 97.48;
-                System.out.println(amount + "candianDollar = " + f.format(nepaliRupee) + " NepaliRupee");
-                break;
+                    omaniRial = amount * 0.30;
+                    System.out.println(amount + "candianDollar = " + f.format(omaniRial) + " OmaniRial");
 
-            case 5: // swissFranc conversion
-                dollar = amount * 0.79;
-                System.out.println(amount + "swissFranc = " + f.format(dollar) + " Dollar");
+                    kuwaitiDinar = amount * 0.24;
+                    System.out.println(amount + "candianDollar = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
 
-                euro = amount * 0.73;
-                System.out.println(amount + "swissFranc = " + f.format(euro) + " Euro");
+                    nepaliRupee = amount * 97.48;
+                    System.out.println(amount + "candianDollar = " + f.format(nepaliRupee) + " NepaliRupee");
+                    break;
 
-                pound = amount * 0.62;
-                System.out.println(amount + "swissFranc = " + f.format(pound) + " Pound");
+                case 5: // swissFranc conversion
+                    dollar = amount * 0.79;
+                    System.out.println(amount + "swissFranc = " + f.format(dollar) + " Dollar");
 
-                canadianDollar = amount * 1.33;
-                System.out.println(amount + "pound = " + f.format(canadianDollar) + " CanadianDollar");
+                    euro = amount * 0.73;
+                    System.out.println(amount + "swissFranc = " + f.format(euro) + " Euro");
 
-                jordanianDinar = amount * 0.56;
-                System.out.println(amount + "swissFranc = " + f.format(jordanianDinar) + " JordanianDinar");
+                    pound = amount * 0.62;
+                    System.out.println(amount + "swissFranc = " + f.format(pound) + " Pound");
 
-                omaniRial = amount * 0.30;
-                System.out.println(amount + "swissFranc = " + f.format(omaniRial) + " OmaniRial");
+                    canadianDollar = amount * 1.33;
+                    System.out.println(amount + "pound = " + f.format(canadianDollar) + " CanadianDollar");
 
-                kuwaitiDinar = amount * 0.24;
-                System.out.println(amount + "swissFranc = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    jordanianDinar = amount * 0.56;
+                    System.out.println(amount + "swissFranc = " + f.format(jordanianDinar) + " JordanianDinar");
 
-                nepaliRupee = amount * 97.48;
-                System.out.println(amount + "swissFranc = " + f.format(nepaliRupee) + " NepaliRupee");
-                break;
+                    omaniRial = amount * 0.30;
+                    System.out.println(amount + "swissFranc = " + f.format(omaniRial) + " OmaniRial");
 
-            case 6: // jordoniDinar
-                dollar = amount * 1.41;
-                System.out.println(amount + "jordoniDinar = " + f.format(dollar) + " Dollar");
+                    kuwaitiDinar = amount * 0.24;
+                    System.out.println(amount + "swissFranc = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
 
-                euro = amount * 1.31;
-                System.out.println(amount + "jordoniDinar = " + f.format(euro) + " Euro");
+                    nepaliRupee = amount * 97.48;
+                    System.out.println(amount + "swissFranc = " + f.format(nepaliRupee) + " NepaliRupee");
+                    break;
 
-                pound = amount * 1.12;
-                System.out.println(amount + "jordoniDinar = " + f.format(pound) + " Pound");
+                case 6: // jordoniDinar
+                    dollar = amount * 1.41;
+                    System.out.println(amount + "jordoniDinar = " + f.format(dollar) + " Dollar");
 
-                canadianDollar = amount * 1.79;
-                System.out.println(amount + "jordoniDinar = " + f.format(canadianDollar) + " CanadianDollar");
+                    euro = amount * 1.31;
+                    System.out.println(amount + "jordoniDinar = " + f.format(euro) + " Euro");
 
-                swissFranc = amount * 1.35;
-                System.out.println(amount + "jordoniDinar = " + f.format(swissFranc) + " SwissFranc");
+                    pound = amount * 1.12;
+                    System.out.println(amount + "jordoniDinar = " + f.format(pound) + " Pound");
 
-                omaniRial = amount * 0.54;
-                System.out.println(amount + "jordoniDinar = " + f.format(omaniRial) + " OmaniRial");
+                    canadianDollar = amount * 1.79;
+                    System.out.println(amount + "jordoniDinar = " + f.format(canadianDollar) + " CanadianDollar");
 
-                kuwaitiDinar = amount * 0.43;
-                System.out.println(amount + "jordoniDinar = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    swissFranc = amount * 1.35;
+                    System.out.println(amount + "jordoniDinar = " + f.format(swissFranc) + " SwissFranc");
 
-                nepaliRupee = amount * 174.63;
-                System.out.println(amount + "jordoniDinar = " + f.format(nepaliRupee) + " NepaliRupee");
-                break;
+                    omaniRial = amount * 0.54;
+                    System.out.println(amount + "jordoniDinar = " + f.format(omaniRial) + " OmaniRial");
 
-            case 7: // omanRial
-                dollar = amount * 2.60;
-                System.out.println(amount + "omanRial = " + f.format(dollar) + " Dollar");
+                    kuwaitiDinar = amount * 0.43;
+                    System.out.println(amount + "jordoniDinar = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
 
-                euro = amount * 2.42;
-                System.out.println(amount + "omanRial = " + f.format(euro) + " Euro");
+                    nepaliRupee = amount * 174.63;
+                    System.out.println(amount + "jordoniDinar = " + f.format(nepaliRupee) + " NepaliRupee");
+                    break;
 
-                pound = amount * 2.05;
-                System.out.println(amount + "omanRial = " + f.format(pound) + " Pound");
+                case 7: // omanRial
+                    dollar = amount * 2.60;
+                    System.out.println(amount + "omanRial = " + f.format(dollar) + " Dollar");
 
-                canadianDollar = amount * 3.30;
-                System.out.println(amount + "omanRial = " + f.format(canadianDollar) + " CanadianDollar");
+                    euro = amount * 2.42;
+                    System.out.println(amount + "omanRial = " + f.format(euro) + " Euro");
 
-                swissFranc = amount * 2.48;
-                System.out.println(amount + "omanRial = " + f.format(swissFranc) + " SwissFranc");
+                    pound = amount * 2.05;
+                    System.out.println(amount + "omanRial = " + f.format(pound) + " Pound");
 
-                jordanianDinar = amount * 1.84;
-                System.out.println(amount + "omanRial = " + f.format(jordanianDinar) + "JordanianDinar");
+                    canadianDollar = amount * 3.30;
+                    System.out.println(amount + "omanRial = " + f.format(canadianDollar) + " CanadianDollar");
 
-                kuwaitiDinar = amount * 0.79;
-                System.out.println(amount + "omanRial = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    swissFranc = amount * 2.48;
+                    System.out.println(amount + "omanRial = " + f.format(swissFranc) + " SwissFranc");
 
-                nepaliRupee = amount * 321.58;
-                System.out.println(amount + "omanRial = " + f.format(nepaliRupee) + " NepaliRupee");
-                break;
+                    jordanianDinar = amount * 1.84;
+                    System.out.println(amount + "omanRial = " + f.format(jordanianDinar) + "JordanianDinar");
 
-            case 8: //kuwaitiDinar
-                dollar = amount * 3.27;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(dollar) + " Dollar");
+                    kuwaitiDinar = amount * 0.79;
+                    System.out.println(amount + "omanRial = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
 
-                euro = amount * 3.04;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(euro) + " Euro");
+                    nepaliRupee = amount * 321.58;
+                    System.out.println(amount + "omanRial = " + f.format(nepaliRupee) + " NepaliRupee");
+                    break;
 
-                pound = amount * 2.59;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(pound) + " Pound");
+                case 8: //kuwaitiDinar
+                    dollar = amount * 3.27;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(dollar) + " Dollar");
 
-                canadianDollar = amount * 4.15;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(canadianDollar) + " CanadianDollar");
+                    euro = amount * 3.04;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(euro) + " Euro");
 
-                swissFranc = amount * 3.13;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(swissFranc) + " SwissFranc");
+                    pound = amount * 2.59;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(pound) + " Pound");
 
-                jordanianDinar = amount * 2.32;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(jordanianDinar) + "JordanianDinar");
+                    canadianDollar = amount * 4.15;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(canadianDollar) + " CanadianDollar");
 
-                omaniRial = amount * 1.26;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(omaniRial) + "OmaniRial");
+                    swissFranc = amount * 3.13;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(swissFranc) + " SwissFranc");
 
-                nepaliRupee = amount * 404.95;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(nepaliRupee) + " NepaliRupess");
-                break;
+                    jordanianDinar = amount * 2.32;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(jordanianDinar) + "JordanianDinar");
 
-            case 9: //nepaliRupeee conversion
-                dollar = amount * 0.0081;
-                System.out.println(amount + "nepaliRupeee = " + f.format(dollar) + " Dollar");
+                    omaniRial = amount * 1.26;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(omaniRial) + "OmaniRial");
 
-                euro = amount * 0.0075;
-                System.out.println(amount + "nepaliRupeee = " + f.format(euro) + " Euro");
+                    nepaliRupee = amount * 404.95;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(nepaliRupee) + " NepaliRupess");
+                    break;
 
-                pound = amount * 0.0064;
-                System.out.println(amount + "nepaliRupeee = " + f.format(pound) + " Pound");
+                case 9: //nepaliRupeee conversion
+                    dollar = amount * 0.0081;
+                    System.out.println(amount + "nepaliRupeee = " + f.format(dollar) + " Dollar");
 
-                canadianDollar = amount * 0.010;
-                System.out.println(amount + "nepaliRupeee = " + f.format(canadianDollar) + " CanadianDollar");
+                    euro = amount * 0.0075;
+                    System.out.println(amount + "nepaliRupeee = " + f.format(euro) + " Euro");
 
-                swissFranc = amount * 0.0077;
-                System.out.println(amount + "nepaliRupeee = " + f.format(swissFranc) + " SwissFranc");
+                    pound = amount * 0.0064;
+                    System.out.println(amount + "nepaliRupeee = " + f.format(pound) + " Pound");
 
-                jordanianDinar = amount * 0.0057;
-                System.out.println(amount + "nepaliRupeee = " + f.format(jordanianDinar) + "JordanianDinar");
+                    canadianDollar = amount * 0.010;
+                    System.out.println(amount + "nepaliRupeee = " + f.format(canadianDollar) + " CanadianDollar");
 
-                omaniRial = amount * 0.0031;
-                System.out.println(amount + "kuwaitiDinar = " + f.format(omaniRial) + "OmaniRial");
+                    swissFranc = amount * 0.0077;
+                    System.out.println(amount + "nepaliRupeee = " + f.format(swissFranc) + " SwissFranc");
 
-                kuwaitiDinar = amount * 0.0025;
-                System.out.println(amount + "nepaliRupeee = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
-                break;
+                    jordanianDinar = amount * 0.0057;
+                    System.out.println(amount + "nepaliRupeee = " + f.format(jordanianDinar) + "JordanianDinar");
 
-            default:
-                System.out.println("Invalid Input");
+                    omaniRial = amount * 0.0031;
+                    System.out.println(amount + "kuwaitiDinar = " + f.format(omaniRial) + "OmaniRial");
 
+                    kuwaitiDinar = amount * 0.0025;
+                    System.out.println(amount + "nepaliRupeee = " + f.format(kuwaitiDinar) + " KuwaitiDinar");
+                    break;
 
-        }
+                default:
+                    System.out.println("Invalid Input");
+
+
+            }
+            System.out.println("do you want to convert other amount? 1- Yes, 2- No");
+            answer = sc.nextInt();
+        }while (answer == 1);
+
+        System.out.println("see you");
     }
 }
